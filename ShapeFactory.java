@@ -26,7 +26,7 @@ public class ShapeFactory
         this.height = 25;
         this.stroke = new BasicStroke(3.0f);
         
-        this.shape = createStar(3, new Point(0, 0), this.width / 2.0, this.width / 2.0);
+        this.shape = createStar(3, new Point(0, 0), this.width / 2.0, this.width / 3.0);
                 break;
         
         /*switch (shape_type / 10) {
