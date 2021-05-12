@@ -20,28 +20,29 @@ public class ShapeFactory
     public Paint paint;
     public int width;
     public int height;
-    
+
+    /**
+     * my comment about this method
+     * @author me
+     */
     public ShapeFactory(final int shape_type) {
         this.width = 25;
         this.height = 25;
         this.stroke = new BasicStroke(3.0f);
-        
-        this.shape = createStar(3, new Point(0, 0), this.width / 2.0, this.width / 3.0);
-                break;
-        
-        /*switch (shape_type / 10) {
+
+        switch (shape_type / 10) {
             case 1: {
                 this.shape = createStar(3, new Point(0, 0), this.width / 2.0, this.width / 2.0);
                 break;
-            }
+            } /**creating hexagon*/
             case 3: {
                 this.shape = createStar(5, new Point(0, 0), this.width / 2.0, this.width / 4.0);
                 break;
-            }
+            } /**creating star*/
             case 5: {
                 this.shape = new Rectangle2D.Double(-this.width / 2.0, -this.height / 2.0, this.width, this.height);
                 break;
-            }
+            } /**creating square*/
             case 7: {
                 final GeneralPath path = new GeneralPath();
                 final double tmp_height = Math.sqrt(2.0) / 2.0 * this.height;
@@ -59,7 +60,7 @@ public class ShapeFactory
             default: {
                 throw new Error("type is nusupported");
             }
-        }*/
+        }
         switch (shape_type % 10) {
             case 1: {
                 this.stroke = new BasicStroke(3.0f);
@@ -85,7 +86,11 @@ public class ShapeFactory
             }
         }
     }
-    
+
+    /**
+     * my comment about this method
+     * @author me
+     */
     private static Shape createStar(final int arms, final Point center, final double rOuter, final double rInner) {
         final double angle = 3.141592653589793 / arms;
         final GeneralPath path = new GeneralPath();
