@@ -31,12 +31,21 @@ public class TitlesPanel extends JPanel implements ActionListener
     }
     
     @Override
+
+    /**
+     * my comment about this method
+     * @author me
+     */
     public void actionPerformed(final ActionEvent arg0) {
         if (this.is_done) {
             this.repaint();
         }
     }
-    
+
+    /**
+     * my comment about this method
+     * @author me
+     */
     private void doDrawing(final Graphics g) {
         this.is_done = false;
         (this.g2d = (Graphics2D)g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
